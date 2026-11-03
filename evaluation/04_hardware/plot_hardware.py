@@ -16,14 +16,22 @@ ps.apply()
 # along the lap (as the simulation's tracking figure): per tyre set the lateral error of the mismatched and the pooled run
 # relative to the matched run, per track position (median over the steps of the 3 runs, 0.25 m sections, 1 m running mean)
 L = runs[0]["lap_length_m"]; bw = 0.25; nbin = int(np.ceil(L / bw)); c = (np.arange(nbin) + 0.5) * bw
-def along(t, a):
+def along(t, a, rs=None):
     v = [[] for _ in range(nbin)]
-    for r in runs:
+    for r in rs or runs:
         if r["tyre"] == t and r["arm"] == a:
             for s_, e in zip(r["lat_steps_s_m"], r["lat_steps_cm"]):
                 v[min(int(s_ // bw), nbin - 1)].append(e)
     med = np.array([np.median(x) if x else np.nan for x in v]); k = 4
     return np.array([np.nanmean(med[np.arange(i - k // 2, i - k // 2 + k) % nbin]) for i in range(nbin)])
+# Table II, with the measures of Table I: tracking error as the median per track position over the steps of the 3 runs,
+# averaged over the lap; one-step prediction error as the median over all steps; lap time as the mean over the runs
+for t in ("slippery", "normal"):
+    for a in ("pooled", "oracle", "inverse"):
+        sel = [r for r in runs if r["tyre"] == t and r["arm"] == a]
+        print(f"Table II {t:8s} {a:8s}: tracking {np.nanmean(along(t, a)):.1f} cm, prediction "
+              f"{np.median(np.concatenate([r['pred_one_steps_mm'] for r in sel])):.2f} mm, lap {np.mean([r['lap_s'] for r in sel]):.2f} s, "
+              f"tracking per run {', '.join('%.1f' % np.nanmean(along(t, a, [r])) for r in sel)} cm")
 fig, axes = plt.subplots(2, 1, sharex=True, sharey=True, figsize=(ps.COLUMN_IN, 1.75))
 for ax, (t, name) in zip(axes, (("slippery", "low-friction tires"), ("normal", "high-friction tires"))):
     m_, w_, p_ = along(t, "oracle"), along(t, "inverse"), along(t, "pooled")

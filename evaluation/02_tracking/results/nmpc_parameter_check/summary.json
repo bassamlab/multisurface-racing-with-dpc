@@ -1,0 +1,95 @@
+[
+  {
+    "parameter_set": "midfit",
+    "requested_laps": 3,
+    "lap_error_cm": 15.588052750838349,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_midfit_s1",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 0.4604870820883603,
+        "mean_lateral_error_m": 0.15748662937780944,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_midfit_s2",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 0.46044977460217745,
+        "mean_lateral_error_m": 0.15754589229994134,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_midfit_s3",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 0.46046522021556935,
+        "mean_lateral_error_m": 0.1575622446442245,
+        "final_progress_m": 698.3588735
+      }
+    ]
+  },
+  {
+    "parameter_set": "mu05fit",
+    "requested_laps": 3,
+    "lap_error_cm": 21.736600775727734,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu05fit_s1",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.2377841297003425,
+        "mean_lateral_error_m": 0.8957426067016176,
+        "final_progress_m": 157.6295743
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu05fit_s2",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 2.683801140165468,
+        "mean_lateral_error_m": 0.2721652341782918,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu05fit_s3",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 2.4928520211030456,
+        "mean_lateral_error_m": 0.26761579252669826,
+        "final_progress_m": 698.3588735
+      }
+    ]
+  },
+  {
+    "parameter_set": "mu11",
+    "requested_laps": 3,
+    "lap_error_cm": 39.87427105297681,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu11_s1",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 3.436778191710084,
+        "mean_lateral_error_m": 0.47026749742256013,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu11_s2",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 3.3848091883195366,
+        "mean_lateral_error_m": 0.47288887981492966,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu11_s3",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 3.448216909850543,
+        "mean_lateral_error_m": 0.4637860927184208,
+        "final_progress_m": 698.3588735
+      }
+    ]
+  }
+]

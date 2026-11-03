@@ -1,4 +1,5 @@
 from copy import copy
+import os
 
 import yaml
 
@@ -22,11 +23,18 @@ class NMPCAdapter:
         config_path = "external/nmpc/Config/"
 
         sim_main_params_file = "RoboRacer-Multibody/sim_main_params.yaml"
-        MPC_params_file = "RoboRacer-Multibody/MPC_params.yaml"
+        MPC_params_file = os.environ.get("NMPC_MPC_PARAMS_FILE", "RoboRacer-Multibody/MPC_params.yaml")  # relative to config_path
         with open(config_path + sim_main_params_file, 'r') as file:
             sim_main_params = yaml.load(file, Loader=yaml.FullLoader)
+        tire_params_file = os.environ.get("NMPC_TIRE_PARAMS_FILE")
+        if tire_params_file:
+            sim_main_params["tire_params_file_MPC"] = tire_params_file
 
         self.vehicle_nmpc = Nonlinear_Model_Predictive_Controller(config_path, MPC_params_file, sim_main_params, initial_state)
+        # The solver does one SQP-RTI iteration per step; from the cold start that first iterate can steer the wrong way.
+        # First step: initial guess from the current state and extra iterations before the first command
+        # (NMPC_WARMUP_ITERATIONS=0 restores the old behavior).
+        self.warmup_iterations = int(os.environ.get("NMPC_WARMUP_ITERATIONS", 10))
 
     def plan(self, states, last_acc, waypoints=None):
         if waypoints is not None:
@@ -56,6 +64,11 @@ class NMPCAdapter:
         initial_state = np.append(initial_state, last_acc)
         self.vehicle_nmpc.set_initial_state(initial_state)
 
+        if self.warmup_iterations:
+            self.vehicle_nmpc.reset(initial_state)  # initial guess: current state at every node
+            for _ in range(self.warmup_iterations):
+                self.vehicle_nmpc.solve(reference_traj)
+            self.warmup_iterations = 0
         u, prediction, _ = self.vehicle_nmpc.solve(reference_traj)
 
         yaw0 = states[3]

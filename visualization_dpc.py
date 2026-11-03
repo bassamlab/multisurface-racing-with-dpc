@@ -24,7 +24,7 @@ from matplotlib.collections import LineCollection
 from matplotlib.patches import Polygon
 
 from helpers import paper_style as ps
-from helpers.eval_metrics import prediction_error
+from helpers.eval_metrics import prediction_error, PRED_STEPS
 
 map_name = sys.argv[1] if len(sys.argv) > 1 else "l_shape"
 results = sys.argv[2] if len(sys.argv) > 2 else "evaluation/02_tracking/results"
@@ -58,7 +58,7 @@ def load_log(name):
         if k in data:
             out[k] = nan(data[k])
     if "pred_xy" in data:
-        out["prediction_error"] = prediction_error(data["pred_xy"], out["x"], out["y"])
+        out["prediction_error"] = prediction_error(data["pred_xy"], out["x"], out["y"], steps=PRED_STEPS)
     return out
 
 
@@ -101,7 +101,7 @@ if map_name == "l_shape" and "oracle" in fig_arms:
 relative = map_name == "l_shape" and all(data.get(a) for a in ("oracle", "inverse")) and os.environ.get("FIG_RELATIVE", "1") == "1"
 if relative:
     panels.append(("relative", "Tracking error\nvs matched [cm]", ()))
-    panels.append(("relative_pred", "Prediction error\nvs matched [cm]", ()))
+    panels.append(("relative_pred", "Prediction error\nvs matched [%s]" % ("mm" if PRED_STEPS == 1 else "cm"), ()))
 fig, axes = plt.subplots(len(panels), 1, sharex=True, figsize=(ps.COLUMN_IN, 1.3 + 1.1 * (len(panels) - 1)), squeeze=False)
 for ax, (key, ylabel, panel_arms) in zip(axes[:, 0], panels):
     friction_background(ax, labels=ax is axes[0, 0])   # zone labels in the upper panel only
@@ -110,7 +110,8 @@ for ax, (key, ylabel, panel_arms) in zip(axes[:, 0], panels):
         k5 = max(int(round(window_m / bin_m)), 1)
         smooth = lambda a: np.array([np.nanmean(a[np.arange(i - k5 // 2, i - k5 // 2 + k5) % n_bins]) for i in range(n_bins)])
         te = {a: binned(data[a], metric)[0] for a in ("pooled", "oracle", "inverse")}
-        dw, dp = smooth(100 * (te["inverse"] - te["oracle"])), smooth(100 * (te["pooled"] - te["oracle"]))
+        f = 1000 if key == "relative_pred" and PRED_STEPS == 1 else 100   # one-step prediction error in mm
+        dw, dp = smooth(f * (te["inverse"] - te["oracle"])), smooth(f * (te["pooled"] - te["oracle"]))
         ax.fill_between(centers, 0, dw, color=ps.COLORS["inverse"], alpha=0.35, lw=0, label="DPC mismatched")
         ax.plot(centers, dw, color=ps.COLORS["inverse"], lw=0.6)
         ax.plot(centers, dp, color=ps.COLORS["pooled"], lw=1.4, label="DPC pooled")
@@ -120,7 +121,7 @@ for ax, (key, ylabel, panel_arms) in zip(axes[:, 0], panels):
         ax.axhline(0, color="#222222", lw=0.6); ax.set_ylabel(ylabel); ax.set_xlim(0, track_len)
         ax.grid(axis="y", color="#e3e3e3", lw=0.5); ax.set_axisbelow(True)
         ax.set_ylim(1.15 * min(0, np.nanmin(dw), np.nanmin(dp)), 1.15 * max(np.nanmax(dw), np.nanmax(dp)))
-        print(f"{metric} vs matched along the lap: mismatched {np.nanmean(dw):+.1f} cm, pooled {np.nanmean(dp):+.1f} cm (lap mean)")
+        print(f"{metric} vs matched along the lap: mismatched {np.nanmean(dw):+.1f}, pooled {np.nanmean(dp):+.1f} ({'mm' if f == 1000 else 'cm'}, lap mean)")
         continue
     for arm in panel_arms:
         med, lo, hi = binned(data[arm], key)

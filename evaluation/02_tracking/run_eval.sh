@@ -8,6 +8,8 @@
 # casadi 3.6.7, torch cpu), acados v0.5.4 built in ~/dev/acados (ACADOS_SOURCE_DIR, LD_LIBRARY_PATH below).
 # Data: data/dpc_experiments/02_tracking_v2 (see its README). Logs: evaluation/02_tracking/results/
 # log_dpc_eval_<map>_eval_<arm>_s<seed>, log_nmpc_eval_<map>_s<seed> (overwrites the committed results; compare with git diff).
+# NMPC: tyre parameters and weights from external/nmpc/Config/RoboRacer-Multibody (midpoint tyre set, weights tuned with
+# run_nmpc_weight_sensitivity.sh), first-step warm-up in regulators/nmpc_adapter.py.
 set -ef   # -f: no globbing of the bracketed override values
 MAP=${1:-l_shape}
 SEEDS=${2:-"1 2 3"}

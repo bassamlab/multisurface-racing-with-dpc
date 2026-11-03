@@ -27,7 +27,9 @@ statements of the paper are unaffected.
 "matched" / "mismatched" = the oracle / inverse runs (DPC_ORACLE=1 / inverse: sampling restricted to the dataset of the true /
 the other friction). NMPC baseline: Pacejka parameters and g-g limits in `external/nmpc/Config/RoboRacer-Multibody` (midpoint
 of the mu 0.5 and 1.1 fits; excitation data from `NMPC_collect_data.py` in `data/nmpc_experiments`, fit with
-`models/fit_nmpc_parameters.py`). Numbers for the text: `evaluation/PAPER_NOTES.md`; figure style: `helpers/paper_style.py`.
+`models/fit_nmpc_parameters.py`; comparison of the tyre sets: `evaluation/02_tracking/run_nmpc_parameter_check.sh`), weights
+tuned with `evaluation/02_tracking/run_nmpc_weight_sensitivity.sh`, first-step warm-up in `regulators/nmpc_adapter.py`. Results of
+both checks: `summary.json` in `evaluation/02_tracking/results/nmpc_parameter_check` and `nmpc_weight_sensitivity`. Numbers for the text: `evaluation/PAPER_NOTES.md`; figure style: `helpers/paper_style.py`.
 
 ## Simulator
 This repository is using multi-body full scale car version of the [F1/10 gym](https://github.com/atomyks/f1tenth_gym/tree/multibody)

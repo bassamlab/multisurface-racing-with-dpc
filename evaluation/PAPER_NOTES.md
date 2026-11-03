@@ -33,22 +33,35 @@ Numbers for the text (cm unless stated):
 - Prediction error along the lap vs matched (Fig. 2 bottom): pooled +0.1 (lap mean), +1.1 to +1.3 in the first 30 m after the
   transitions at 0 / 271 / 475 m; mismatched +1.8, up to +8.6 at 595 m. Largest pooled tracking deficit 5.0 at 595 m.
 - Lap times in the sim: all four controllers 47.8 to 47.9 s (same speed profile).
-- Tracking, lap: pooled 13.7, matched 14.4, mismatched 15.0, NMPC 15.6. mu 0.5: pooled 12.1 vs NMPC 19.3; mu 1.1: NMPC best
-  (12.1 vs pooled 14.0, mismatched 19.2). Seed-to-seed spread <= 0.2 (lap).
+- Tracking, lap: pooled 13.7, matched 14.4, mismatched 15.0, NMPC 13.3. mu 0.5: pooled 12.1 vs NMPC 17.4; mu 0.8 / 1.1: NMPC best
+  (12.1 vs pooled 15.4; 9.7 vs pooled 14.0, mismatched 19.2). Seed-to-seed spread <= 0.2 (lap).
 - Prediction (rms over the 10-step horizon, median): pooled 3.5 / 8.5 / 4.8, matched 3.0 / 8.2 / 4.0, mismatched 6.1 / 8.6 /
   8.6 at mu 0.5 / 0.8 / 1.1.
+- One-step prediction (Table I, Fig. 2 bottom; helpers/eval_metrics.PRED_STEPS = 1, mm, median, mu 0.5 / 0.8 / 1.1 / lap): pooled
+  2.1 / 2.6 / 1.8 / 2.0, matched 1.5 / 2.6 / 0.7 / 1.5, mismatched 4.6 / 2.6 / 3.7 / 3.8; along the lap vs matched: mismatched
+  +1.7, pooled +0.3 (lap mean). PRED_STEPS=0 gives the horizon values above.
 - Pooled tracks like the better single dataset: where matched and mismatched differ by > 2 cm (54% of the lap; mismatched is the
   better one on half of those), pooled is closer to the better one on 76% (2.1 above it, the worse one 8.0 above).
 - Along the lap vs matched (Fig. 2 bottom): mismatched +0.6, pooled -0.8 (lap mean); mu 1.1 zone up to +20 for mismatched.
 - Implied friction (Fig. 3): 0.77 / 0.88 / 0.90 in the mu 0.5 / 0.8 / 1.1 zones; readable (two predictions > 1 cm apart) on 99% of
   the lap; on the 20% of the lap where they differ most (> 6.5 cm) 0.77 / 0.89 / 0.96.
-- Nürburgring (lap): pooled 8.8, NMPC 8.4; largest DPC deviation at the hairpin (curvature 0.091 1/m, twice the L-shape data).
+- NMPC (2026-11-03): tyre parameters = midpoint of the fits at mu 0.5 and 1.1; first step seeded with the current state plus 10
+  extra solver iterations (regulators/nmpc_adapter.py; before, the cold first RTI iterate could steer the wrong way and end the
+  run in the first corner). Tyre-set check (`run_nmpc_parameter_check.sh`, l_shape, 3 laps x 3 seeds, weights before the tuning,
+  lap): 0.5 fit 21.7 (left the track in 1 of 3), 1.1 fit 39.9, midpoint 15.6.
+  Weight tuning of the midpoint set (`run_nmpc_weight_sensitivity.sh`, budget of the DPC weight check): q_lat and
+  r_steering_rate, nominal (16.8, 264.9) and half / double of each, 3 seeds x 3 laps, lap: q_lat 8.4 16.5, 33.6 13.3;
+  r_steering_rate 132.45 16.3, 529.8 14.6; nominal 15.6. Selected q_lat 33.6 (external/nmpc MPC_params.yaml).
+- Nürburgring (lap): pooled 8.8, NMPC 6.7; largest DPC deviation at the hairpin (curvature 0.091 1/m, twice the L-shape data).
 - Uncapped Nürburgring (Sec. IV-D; `VMAX=100 RUN_NMPC=0 evaluation/02_tracking/run_eval.sh Nuerburgring 1 pooled`): the profile
   starts at 35.0 m/s and 68% of it lies above the data's 20.5 m/s; the first DPC solve fails (OSQP SolverError).
 - Hardware, slippery tyres: lateral pooled 2.0 (1.5-2.2 over the 3 runs), matched 1.9 (1.5-2.2), mismatched 4.0 (2.9-4.7);
   prediction (rms, 20 steps) 1.28 / 1.27 / 2.62; lap 9.62 / 9.51 / 9.30 s. Normal tyres: lateral 1.3 (1.0-1.6) / 1.5 (1.3-1.6) /
   1.0 (0.9-1.2), prediction 0.90 / 0.85 / 1.19, lap 10.17 / 9.84 / 10.35 s
   (the mismatched data tracks tighter but is slowest). Along the lap vs matched: slippery mismatched +1.44, pooled +0.12.
+- Table II (printed by `04_hardware/plot_hardware.py`; tracking: median per track position over the 3 runs, averaged over the
+  lap; one-step prediction in mm, median over all steps; pooled / matched / mismatched): slippery tracking 1.6 / 1.5 / 3.0,
+  prediction 1.72 / 1.69 / 2.08; normal tracking 0.9 / 1.1 / 0.7, prediction 1.52 / 1.56 / 1.47.
 - Why the sim separates the datasets less than the lab: in the simulator's tyre model friction scales the peak force only
   (cornering stiffness K_y = F_z p_ky1, independent of mu), so friction changes the motion only near saturation; the raceline
   profile uses at most about 0.5 / 0.4 of the grip in the mu 0.8 / 1.1 zones. Real tyre sets also differ in stiffness.

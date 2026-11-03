@@ -1,0 +1,212 @@
+[
+  {
+    "parameter_set": "midfit",
+    "requested_laps": 3,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_midfit_s1",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.11775672856308,
+        "mean_lateral_error_m": 2.273160629486719,
+        "final_progress_m": 25.9390439
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_midfit_s2",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.117727573088704,
+        "mean_lateral_error_m": 2.2731562280171222,
+        "final_progress_m": 25.9390439
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_midfit_s3",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.1177992491631,
+        "mean_lateral_error_m": 2.2731654881414975,
+        "final_progress_m": 25.9390439
+      }
+    ]
+  },
+  {
+    "parameter_set": "midpoint",
+    "requested_laps": 3,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_midpoint_s1",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 1.2013403820536022,
+        "mean_lateral_error_m": 0.1676461238534727,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_midpoint_s2",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 1.2003908975029822,
+        "mean_lateral_error_m": 0.16761200090876194,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_midpoint_s3",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 1.2008565290741224,
+        "mean_lateral_error_m": 0.16754709337467624,
+        "final_progress_m": 698.3588735
+      }
+    ]
+  },
+  {
+    "parameter_set": "mu05fit",
+    "requested_laps": 3,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu05fit_s1",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.217686706721896,
+        "mean_lateral_error_m": 2.2079160693874718,
+        "final_progress_m": 27.9343549
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu05fit_s2",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.213840248094645,
+        "mean_lateral_error_m": 2.2062931089656517,
+        "final_progress_m": 27.9343549
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu05fit_s3",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.214391392000452,
+        "mean_lateral_error_m": 2.206521652104658,
+        "final_progress_m": 27.9343549
+      }
+    ]
+  },
+  {
+    "parameter_set": "mu08fit",
+    "requested_laps": 3,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu08fit_s1",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 1.071740628192917,
+        "mean_lateral_error_m": 0.2132796386394899,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu08fit_s2",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 1.0705835864727846,
+        "mean_lateral_error_m": 0.21319326358113994,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu08fit_s3",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 1.0708374471528512,
+        "mean_lateral_error_m": 0.21315383077406713,
+        "final_progress_m": 698.3588735
+      }
+    ]
+  },
+  {
+    "parameter_set": "mu11",
+    "requested_laps": 3,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu11_s1",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 3.323160444129848,
+        "mean_lateral_error_m": 0.4733465748019383,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu11_s2",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 3.1079651906792667,
+        "mean_lateral_error_m": 0.46498275417349894,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_mu11_s3",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 3.2279223570403266,
+        "mean_lateral_error_m": 0.4700326535086868,
+        "final_progress_m": 698.3588735
+      }
+    ]
+  },
+  {
+    "parameter_set": "pooled0511fit",
+    "requested_laps": 3,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_pooled0511fit_s1",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.025963665155169,
+        "mean_lateral_error_m": 2.279810524017151,
+        "final_progress_m": 27.9343549
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_pooled0511fit_s2",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.025452460305175,
+        "mean_lateral_error_m": 2.279536587311431,
+        "final_progress_m": 27.9343549
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_pooled0511fit_s3",
+        "completed_laps": 0,
+        "left_track": true,
+        "maximum_lateral_error_m": 5.024377364677912,
+        "mean_lateral_error_m": 2.2791184304808025,
+        "final_progress_m": 27.9343549
+      }
+    ]
+  },
+  {
+    "parameter_set": "pooledfit",
+    "requested_laps": 3,
+    "runs": [
+      {
+        "file": "log_nmpc_eval_l_shape_param_pooledfit_s1",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 2.9551382103831707,
+        "mean_lateral_error_m": 0.2164864658653079,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_pooledfit_s2",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 2.927963535841618,
+        "mean_lateral_error_m": 0.2161151602357537,
+        "final_progress_m": 698.3588735
+      },
+      {
+        "file": "log_nmpc_eval_l_shape_param_pooledfit_s3",
+        "completed_laps": 3,
+        "left_track": false,
+        "maximum_lateral_error_m": 2.9289865278449057,
+        "mean_lateral_error_m": 0.21622294517343188,
+        "final_progress_m": 698.3588735
+      }
+    ]
+  }
+]

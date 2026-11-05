@@ -6,7 +6,7 @@ Data, raw result logs, figures and Table I of "Data-Driven Predictive Control fo
 
 Setup (Python 3.8):
 ```
-git submodule update --init external/dpc external/nmpc        # paper/ is the Overleaf project (needs an Overleaf token)
+git submodule update --init external/dpc external/nmpc        # the paper is a separate Overleaf project, not part of this repository
 python3.8 -m venv .venv && .venv/bin/pip install "pip<24.1" && .venv/bin/pip install -r evaluation/requirements.txt
 .venv/bin/pip install -e <f1tenth_gym, branch multibody, e55925e> -e <acados v0.5.4>/interfaces/acados_template
 ```

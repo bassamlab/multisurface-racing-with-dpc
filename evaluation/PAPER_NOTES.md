@@ -23,7 +23,7 @@ Numbers for the text (cm unless stated):
   own regime (1'g) is only 0.65 (T_ini 5) / 0.73 (T_ini 10); lambda_sigma x100 or 1000 columns help little, T_ini 20 not more.
   Grip use (share of samples above 70% of mu g, `01_prediction/grip_usage.py`): random 68% (mu 0.5) / 57% (mu 1.1), raceline
   6% (mu 0.5) / 0% (mu 1.1).
-  The earlier random data in 01_prediction (branch archive/full-2026-10; labelled mu 0.3 / 1.0; their stored configs all say mu 1.1, so the friction is
+  The earlier random data in 01_prediction (tag archive/full-2026-10; labelled mu 0.3 / 1.0; their stored configs all say mu 1.1, so the friction is
   undocumented) separate by speed (median 29.6 vs 13.8 m/s): weight on the own regime 0.99 / 0.93; pooled 17.6 / 18.4, matched
   13.2 / 17.2, mismatched 58.7 / 63.0 (T_ini 5).
 - Open item: closed-loop simulation with T_ini 10 (currently 5), to be run.
@@ -66,4 +66,4 @@ Numbers for the text (cm unless stated):
   (cornering stiffness K_y = F_z p_ky1, independent of mu), so friction changes the motion only near saturation; the raceline
   profile uses at most about 0.5 / 0.4 of the grip in the mu 0.8 / 1.1 zones. Real tyre sets also differ in stiffness.
 
-Earlier robustness checks and exploratory diagnostics: branch `archive/full-2026-10` (`evaluation/exploratory`).
+Earlier robustness checks and exploratory diagnostics: tag `archive/full-2026-10` (`evaluation/exploratory`).

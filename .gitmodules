@@ -1,7 +1,7 @@
 [submodule "external/dpc"]
 	path = external/dpc
-	url = https://github.com/bassamlab/Contextual-DPC.git
-	branch = ecc2027
+	url = git@git.rwth-aachen.de:CPM/Project/julius/software/deepc.git
+	branch = multisurface-racing-with-dpc-lab
 [submodule "external/nmpc"]
 	path = external/nmpc
 	url = https://github.com/bassamlab/TUM-CONTROL-with-DPC.git

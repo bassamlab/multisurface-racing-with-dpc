@@ -5,6 +5,12 @@ Data, raw result logs, figures and tables of "Data-Driven Predictive Control for
 (Beerwerth, Tischbein, Alrifaee) are committed; the scripts below regenerate them. Earlier datasets and exploratory
 diagnostics are on tag `archive/full-2026-10`.
 
+Branches: `main` is the paper release and pins `external/dpc` to the public `bassamlab/Contextual-DPC` (branch `ecc2027`).
+`dev` is for ongoing work and tracks the private deepc development branch `multisurface-racing-with-dpc-lab` instead
+(CPM GitLab access needed), so DPC changes can be tested here before release. `Contextual-DPC` mirrors the protected deepc
+branches, so a DPC change reaches `main` by merging it into `ecc2027`. When merging `dev` into `main`, keep `main`'s
+`external/dpc` entry in `.gitmodules` and pin `external/dpc` to the released `ecc2027` commit.
+
 Setup (Python 3.8):
 ```
 git submodule update --init external/dpc external/nmpc external/f1tenth_gym

@@ -3,7 +3,7 @@
 ## DPC under varying friction (paper results)
 Data, raw result logs, figures and tables of "Data-Driven Predictive Control for Autonomous Racing under Varying Friction"
 (Beerwerth, Tischbein, Alrifaee) are committed; the scripts below regenerate them. Earlier datasets and exploratory
-diagnostics are on branch `archive/full-2026-10`.
+diagnostics are on tag `archive/full-2026-10`.
 
 Setup (Python 3.8):
 ```

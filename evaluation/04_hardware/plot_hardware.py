@@ -36,8 +36,8 @@ fig, axes = plt.subplots(2, 1, sharex=True, sharey=True, figsize=(ps.COLUMN_IN, 
 for ax, (t, name) in zip(axes, (("slippery", "low-friction tires"), ("normal", "high-friction tires"))):
     m_, w_, p_ = along(t, "oracle"), along(t, "inverse"), along(t, "pooled")
     dw, dp = w_ - m_, p_ - m_
-    ax.fill_between(c, 0, dw, color=ps.COLORS["inverse"], alpha=0.3, lw=0, label="DPC mismatched")
-    ax.plot(c, dw, color=ps.COLORS["inverse"], lw=0.6); ax.plot(c, dp, color=ps.COLORS["pooled"], lw=1.4, label="DPC pooled")
+    ax.fill_between(c, 0, dw, color=ps.COLORS["inverse"], alpha=0.3, lw=0, label="mismatched DPC")
+    ax.plot(c, dw, color=ps.COLORS["inverse"], lw=0.6); ax.plot(c, dp, color=ps.COLORS["pooled"], lw=1.4, label="pooled DPC")
     h, l = ax.get_legend_handles_labels()   # pooled first, as in the tables
     ax.legend(h[::-1], l[::-1], loc="upper right", ncol=2, handlelength=1.8, columnspacing=0.8, borderaxespad=0.2)
     ax.axhline(0, color="#222222", lw=0.6); ax.set_xlim(0, L)

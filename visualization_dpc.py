@@ -112,9 +112,9 @@ for ax, (key, ylabel, panel_arms) in zip(axes[:, 0], panels):
         te = {a: binned(data[a], metric)[0] for a in ("pooled", "oracle", "inverse")}
         f = 1000 if key == "relative_pred" and PRED_STEPS == 1 else 100   # one-step prediction error in mm
         dw, dp = smooth(f * (te["inverse"] - te["oracle"])), smooth(f * (te["pooled"] - te["oracle"]))
-        ax.fill_between(centers, 0, dw, color=ps.COLORS["inverse"], alpha=0.35, lw=0, label="DPC mismatched")
+        ax.fill_between(centers, 0, dw, color=ps.COLORS["inverse"], alpha=0.35, lw=0, label="mismatched DPC")
         ax.plot(centers, dw, color=ps.COLORS["inverse"], lw=0.6)
-        ax.plot(centers, dp, color=ps.COLORS["pooled"], lw=1.4, label="DPC pooled")
+        ax.plot(centers, dp, color=ps.COLORS["pooled"], lw=1.4, label="pooled DPC")
         if key == "relative":
             h, l = ax.get_legend_handles_labels()   # pooled first, as in the tables
             ax.legend(h[::-1], l[::-1], loc="upper left", ncol=2, handlelength=1.8, columnspacing=0.8, borderaxespad=0.2)

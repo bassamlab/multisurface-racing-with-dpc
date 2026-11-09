@@ -769,9 +769,81 @@ L 122.682431 14.571875
 " style="fill: none; stroke: #1b7f3b; stroke-width: 1.4; stroke-linecap: square"/>
     </g>
     <g id="text_4">
-     <!-- DPC pooled -->
+     <!-- pooled DPC -->
      <g transform="translate(128.282431 17.021875)scale(0.07 -0.07)">
       <defs>
+       <path id="STIXGeneral-Regular-70" d="M 1018 2931 
+L 1018 2438 
+Q 1421 2944 1939 2944 
+Q 2406 2944 2707 2560 
+Q 3008 2176 3008 1581 
+Q 3008 883 2621 409 
+Q 2234 -64 1664 -64 
+Q 1466 -64 1328 -6 
+Q 1190 51 1018 211 
+L 1018 -794 
+Q 1018 -1094 1120 -1180 
+Q 1222 -1267 1581 -1274 
+L 1581 -1389 
+L 32 -1389 
+L 32 -1280 
+Q 314 -1254 397 -1171 
+Q 480 -1088 480 -838 
+L 480 2157 
+Q 480 2381 429 2451 
+Q 378 2522 218 2522 
+Q 115 2522 58 2515 
+L 58 2618 
+Q 506 2752 979 2944 
+L 1018 2931 
+z
+M 1018 2138 
+L 1018 563 
+Q 1018 422 1238 281 
+Q 1459 141 1683 141 
+Q 2029 141 2243 467 
+Q 2458 794 2458 1325 
+Q 2458 1888 2243 2224 
+Q 2029 2560 1670 2560 
+Q 1446 2560 1232 2419 
+Q 1018 2278 1018 2138 
+z
+" transform="scale(0.015625)"/>
+       <path id="STIXGeneral-Regular-64" d="M 3142 269 
+L 2202 -64 
+L 2176 -45 
+L 2176 365 
+Q 1869 -64 1357 -64 
+Q 826 -64 499 317 
+Q 173 698 173 1312 
+Q 173 1990 563 2467 
+Q 954 2944 1504 2944 
+Q 1850 2944 2176 2669 
+L 2176 3667 
+Q 2176 3866 2118 3930 
+Q 2061 3994 1882 3994 
+Q 1792 3994 1741 3987 
+L 1741 4090 
+Q 2323 4243 2682 4371 
+L 2714 4358 
+L 2714 730 
+Q 2714 506 2768 435 
+Q 2822 365 2995 365 
+Q 3034 365 3142 371 
+L 3142 269 
+z
+M 2176 653 
+L 2176 2125 
+Q 2176 2381 1981 2573 
+Q 1786 2765 1523 2765 
+Q 1158 2765 940 2438 
+Q 723 2112 723 1568 
+Q 723 979 963 624 
+Q 1203 269 1606 269 
+Q 1907 269 2080 474 
+Q 2176 582 2176 653 
+z
+" transform="scale(0.015625)"/>
        <path id="STIXGeneral-Regular-44" d="M 102 4237 
 L 1830 4237 
 Q 3078 4237 3750 3654 
@@ -856,89 +928,17 @@ Q 2944 192 3251 339
 Q 3558 486 3930 838 
 z
 " transform="scale(0.015625)"/>
-       <path id="STIXGeneral-Regular-70" d="M 1018 2931 
-L 1018 2438 
-Q 1421 2944 1939 2944 
-Q 2406 2944 2707 2560 
-Q 3008 2176 3008 1581 
-Q 3008 883 2621 409 
-Q 2234 -64 1664 -64 
-Q 1466 -64 1328 -6 
-Q 1190 51 1018 211 
-L 1018 -794 
-Q 1018 -1094 1120 -1180 
-Q 1222 -1267 1581 -1274 
-L 1581 -1389 
-L 32 -1389 
-L 32 -1280 
-Q 314 -1254 397 -1171 
-Q 480 -1088 480 -838 
-L 480 2157 
-Q 480 2381 429 2451 
-Q 378 2522 218 2522 
-Q 115 2522 58 2515 
-L 58 2618 
-Q 506 2752 979 2944 
-L 1018 2931 
-z
-M 1018 2138 
-L 1018 563 
-Q 1018 422 1238 281 
-Q 1459 141 1683 141 
-Q 2029 141 2243 467 
-Q 2458 794 2458 1325 
-Q 2458 1888 2243 2224 
-Q 2029 2560 1670 2560 
-Q 1446 2560 1232 2419 
-Q 1018 2278 1018 2138 
-z
-" transform="scale(0.015625)"/>
-       <path id="STIXGeneral-Regular-64" d="M 3142 269 
-L 2202 -64 
-L 2176 -45 
-L 2176 365 
-Q 1869 -64 1357 -64 
-Q 826 -64 499 317 
-Q 173 698 173 1312 
-Q 173 1990 563 2467 
-Q 954 2944 1504 2944 
-Q 1850 2944 2176 2669 
-L 2176 3667 
-Q 2176 3866 2118 3930 
-Q 2061 3994 1882 3994 
-Q 1792 3994 1741 3987 
-L 1741 4090 
-Q 2323 4243 2682 4371 
-L 2714 4358 
-L 2714 730 
-Q 2714 506 2768 435 
-Q 2822 365 2995 365 
-Q 3034 365 3142 371 
-L 3142 269 
-z
-M 2176 653 
-L 2176 2125 
-Q 2176 2381 1981 2573 
-Q 1786 2765 1523 2765 
-Q 1158 2765 940 2438 
-Q 723 2112 723 1568 
-Q 723 979 963 624 
-Q 1203 269 1606 269 
-Q 1907 269 2080 474 
-Q 2176 582 2176 653 
-z
-" transform="scale(0.015625)"/>
       </defs>
-      <use xlink:href="#STIXGeneral-Regular-44"/>
-      <use xlink:href="#STIXGeneral-Regular-50" x="72.199982"/>
-      <use xlink:href="#STIXGeneral-Regular-43" x="127.899979"/>
-      <use xlink:href="#STIXGeneral-Regular-20" x="194.599976"/>
-      <use xlink:href="#STIXGeneral-Regular-70" x="219.59996"/>
-      <use xlink:href="#STIXGeneral-Regular-6f" x="269.599945"/>
-      <use xlink:href="#STIXGeneral-Regular-6f" x="319.59993"/>
-      <use xlink:href="#STIXGeneral-Regular-6c" x="369.599915"/>
-      <use xlink:href="#STIXGeneral-Regular-65" x="397.399902"/>
-      <use xlink:href="#STIXGeneral-Regular-64" x="441.799896"/>
+      <use xlink:href="#STIXGeneral-Regular-70"/>
+      <use xlink:href="#STIXGeneral-Regular-6f" x="49.999985"/>
+      <use xlink:href="#STIXGeneral-Regular-6f" x="99.999969"/>
+      <use xlink:href="#STIXGeneral-Regular-6c" x="149.999954"/>
+      <use xlink:href="#STIXGeneral-Regular-65" x="177.799942"/>
+      <use xlink:href="#STIXGeneral-Regular-64" x="222.199936"/>
+      <use xlink:href="#STIXGeneral-Regular-20" x="272.199921"/>
+      <use xlink:href="#STIXGeneral-Regular-44" x="297.199905"/>
+      <use xlink:href="#STIXGeneral-Regular-50" x="369.399887"/>
+      <use xlink:href="#STIXGeneral-Regular-43" x="425.099884"/>
      </g>
     </g>
     <g id="patch_5">
@@ -950,7 +950,7 @@ z
 " style="fill: #7b3294; fill-opacity: 0.3"/>
     </g>
     <g id="text_5">
-     <!-- DPC mismatched -->
+     <!-- mismatched DPC -->
      <g transform="translate(186.509306 17.021875)scale(0.07 -0.07)">
       <defs>
        <path id="STIXGeneral-Regular-6d" d="M 4960 0 
@@ -1082,20 +1082,20 @@ L 3117 0
 z
 " transform="scale(0.015625)"/>
       </defs>
-      <use xlink:href="#STIXGeneral-Regular-44"/>
-      <use xlink:href="#STIXGeneral-Regular-50" x="72.199982"/>
-      <use xlink:href="#STIXGeneral-Regular-43" x="127.899979"/>
-      <use xlink:href="#STIXGeneral-Regular-20" x="194.599976"/>
-      <use xlink:href="#STIXGeneral-Regular-6d" x="219.59996"/>
-      <use xlink:href="#STIXGeneral-Regular-69" x="297.399948"/>
-      <use xlink:href="#STIXGeneral-Regular-73" x="325.199936"/>
-      <use xlink:href="#STIXGeneral-Regular-6d" x="364.09993"/>
-      <use xlink:href="#STIXGeneral-Regular-61" x="441.899918"/>
-      <use xlink:href="#STIXGeneral-Regular-74" x="486.299911"/>
-      <use xlink:href="#STIXGeneral-Regular-63" x="514.099899"/>
-      <use xlink:href="#STIXGeneral-Regular-68" x="558.499893"/>
-      <use xlink:href="#STIXGeneral-Regular-65" x="608.499878"/>
-      <use xlink:href="#STIXGeneral-Regular-64" x="652.899872"/>
+      <use xlink:href="#STIXGeneral-Regular-6d"/>
+      <use xlink:href="#STIXGeneral-Regular-69" x="77.799988"/>
+      <use xlink:href="#STIXGeneral-Regular-73" x="105.599976"/>
+      <use xlink:href="#STIXGeneral-Regular-6d" x="144.499969"/>
+      <use xlink:href="#STIXGeneral-Regular-61" x="222.299957"/>
+      <use xlink:href="#STIXGeneral-Regular-74" x="266.699951"/>
+      <use xlink:href="#STIXGeneral-Regular-63" x="294.499939"/>
+      <use xlink:href="#STIXGeneral-Regular-68" x="338.899933"/>
+      <use xlink:href="#STIXGeneral-Regular-65" x="388.899918"/>
+      <use xlink:href="#STIXGeneral-Regular-64" x="433.299911"/>
+      <use xlink:href="#STIXGeneral-Regular-20" x="483.299896"/>
+      <use xlink:href="#STIXGeneral-Regular-44" x="508.299881"/>
+      <use xlink:href="#STIXGeneral-Regular-50" x="580.499863"/>
+      <use xlink:href="#STIXGeneral-Regular-43" x="636.19986"/>
      </g>
     </g>
    </g>
@@ -1794,18 +1794,18 @@ L 122.682431 59.440625
 " style="fill: none; stroke: #1b7f3b; stroke-width: 1.4; stroke-linecap: square"/>
     </g>
     <g id="text_17">
-     <!-- DPC pooled -->
+     <!-- pooled DPC -->
      <g transform="translate(128.282431 61.890625)scale(0.07 -0.07)">
-      <use xlink:href="#STIXGeneral-Regular-44"/>
-      <use xlink:href="#STIXGeneral-Regular-50" x="72.199982"/>
-      <use xlink:href="#STIXGeneral-Regular-43" x="127.899979"/>
-      <use xlink:href="#STIXGeneral-Regular-20" x="194.599976"/>
-      <use xlink:href="#STIXGeneral-Regular-70" x="219.59996"/>
-      <use xlink:href="#STIXGeneral-Regular-6f" x="269.599945"/>
-      <use xlink:href="#STIXGeneral-Regular-6f" x="319.59993"/>
-      <use xlink:href="#STIXGeneral-Regular-6c" x="369.599915"/>
-      <use xlink:href="#STIXGeneral-Regular-65" x="397.399902"/>
-      <use xlink:href="#STIXGeneral-Regular-64" x="441.799896"/>
+      <use xlink:href="#STIXGeneral-Regular-70"/>
+      <use xlink:href="#STIXGeneral-Regular-6f" x="49.999985"/>
+      <use xlink:href="#STIXGeneral-Regular-6f" x="99.999969"/>
+      <use xlink:href="#STIXGeneral-Regular-6c" x="149.999954"/>
+      <use xlink:href="#STIXGeneral-Regular-65" x="177.799942"/>
+      <use xlink:href="#STIXGeneral-Regular-64" x="222.199936"/>
+      <use xlink:href="#STIXGeneral-Regular-20" x="272.199921"/>
+      <use xlink:href="#STIXGeneral-Regular-44" x="297.199905"/>
+      <use xlink:href="#STIXGeneral-Regular-50" x="369.399887"/>
+      <use xlink:href="#STIXGeneral-Regular-43" x="425.099884"/>
      </g>
     </g>
     <g id="patch_9">
@@ -1817,22 +1817,22 @@ z
 " style="fill: #7b3294; fill-opacity: 0.3"/>
     </g>
     <g id="text_18">
-     <!-- DPC mismatched -->
+     <!-- mismatched DPC -->
      <g transform="translate(186.509306 61.890625)scale(0.07 -0.07)">
-      <use xlink:href="#STIXGeneral-Regular-44"/>
-      <use xlink:href="#STIXGeneral-Regular-50" x="72.199982"/>
-      <use xlink:href="#STIXGeneral-Regular-43" x="127.899979"/>
-      <use xlink:href="#STIXGeneral-Regular-20" x="194.599976"/>
-      <use xlink:href="#STIXGeneral-Regular-6d" x="219.59996"/>
-      <use xlink:href="#STIXGeneral-Regular-69" x="297.399948"/>
-      <use xlink:href="#STIXGeneral-Regular-73" x="325.199936"/>
-      <use xlink:href="#STIXGeneral-Regular-6d" x="364.09993"/>
-      <use xlink:href="#STIXGeneral-Regular-61" x="441.899918"/>
-      <use xlink:href="#STIXGeneral-Regular-74" x="486.299911"/>
-      <use xlink:href="#STIXGeneral-Regular-63" x="514.099899"/>
-      <use xlink:href="#STIXGeneral-Regular-68" x="558.499893"/>
-      <use xlink:href="#STIXGeneral-Regular-65" x="608.499878"/>
-      <use xlink:href="#STIXGeneral-Regular-64" x="652.899872"/>
+      <use xlink:href="#STIXGeneral-Regular-6d"/>
+      <use xlink:href="#STIXGeneral-Regular-69" x="77.799988"/>
+      <use xlink:href="#STIXGeneral-Regular-73" x="105.599976"/>
+      <use xlink:href="#STIXGeneral-Regular-6d" x="144.499969"/>
+      <use xlink:href="#STIXGeneral-Regular-61" x="222.299957"/>
+      <use xlink:href="#STIXGeneral-Regular-74" x="266.699951"/>
+      <use xlink:href="#STIXGeneral-Regular-63" x="294.499939"/>
+      <use xlink:href="#STIXGeneral-Regular-68" x="338.899933"/>
+      <use xlink:href="#STIXGeneral-Regular-65" x="388.899918"/>
+      <use xlink:href="#STIXGeneral-Regular-64" x="433.299911"/>
+      <use xlink:href="#STIXGeneral-Regular-20" x="483.299896"/>
+      <use xlink:href="#STIXGeneral-Regular-44" x="508.299881"/>
+      <use xlink:href="#STIXGeneral-Regular-50" x="580.499863"/>
+      <use xlink:href="#STIXGeneral-Regular-43" x="636.19986"/>
      </g>
     </g>
    </g>
